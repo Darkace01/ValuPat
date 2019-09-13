@@ -15,7 +15,12 @@ namespace ValuPat
     public partial class C00_P02_Titolare
     {
         public int ID_Titolare { get; set; }
+        
         public Nullable<int> IDDPO { get; set; }
+        public virtual C00_P01_DPO DPO { get; set; }
+
+        public virtual C00_P04_Responsabile Responsabile { get; set; }
+
         public string User1 { get; set; }
         public string Password1 { get; set; }
         public string TipoAzienda { get; set; }

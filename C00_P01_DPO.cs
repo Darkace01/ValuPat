@@ -11,10 +11,14 @@ namespace ValuPat
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class C00_P01_DPO
     {
         public int ID_DPO { get; set; }
+        public virtual C00_P01_DPO DPO { get; set; }
+
+        public virtual C00_P04_Responsabile Responsabile { get; set; }
         public string User1 { get; set; }
         public string Password1 { get; set; }
         public string TipoAzienda { get; set; }
@@ -35,6 +39,7 @@ namespace ValuPat
         public string Cellulare { get; set; }
         public string Email { get; set; }
         public string PEC { get; set; }
+        [Required]
         public string RL_Cognome { get; set; }
         public string RL_Nome { get; set; }
         public string RL_CodiceFiscale { get; set; }

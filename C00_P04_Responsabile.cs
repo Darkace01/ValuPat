@@ -11,12 +11,17 @@ namespace ValuPat
 {
     using System;
     using System.Collections.Generic;
-    
+
     public partial class C00_P04_Responsabile
     {
         public int ID_Responsabile { get; set; }
+
         public Nullable<int> IDDPO { get; set; }
+        public virtual List<C00_P01_DPO> DPO {get; set;}
+
         public Nullable<int> IDTitolare { get; set; }
+        public virtual List<C00_P02_Titolare> Titolare { get; set; }
+
         public string User1 { get; set; }
         public string Password1 { get; set; }
         public string TipoAzienda { get; set; }
